@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
 import useHttp from "../../hooks/use-http";
 import { addComment } from "../../lib/api";
@@ -27,12 +27,11 @@ const NewCommentForm = (props) => {
 
     const enteredTextIsValid = !isEmpty(enteredText);
 
-    {
-      enteredTextIsValid &&
-        sendRequest({
-          commentData: { text: enteredText },
-          quoteId: props.quoteId,
-        });
+    if (enteredTextIsValid) {
+      sendRequest({
+        commentData: { text: enteredText },
+        quoteId: props.quoteId,
+      });
     }
   };
 
@@ -43,7 +42,7 @@ const NewCommentForm = (props) => {
           <LoadingSpinner />
         </div>
       )}
-      <div className={classes.control} onSubmit={submitFormHandler}>
+      <div className={classes.control}>
         <label htmlFor="comment">Your Comment</label>
         <textarea id="comment" rows="5" ref={commentTextRef}></textarea>
       </div>
