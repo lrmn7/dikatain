@@ -1,0 +1,26 @@
+.comments {
+  text-align: center;
+  color: #162b2b;
+}
+
+.comments > button {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 9999px;
+}
+
+@media only screen and (max-width: 768px) {
+  .comments > button {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .comments {
+    font-size: 0.7rem;
+  }
+
+  .comments > button {
+    font-size: 0.6rem;
+  }
+}

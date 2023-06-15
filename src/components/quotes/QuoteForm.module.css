@@ -1,0 +1,75 @@
+.form {
+  position: relative;
+  color: #162b2b;
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.control input,
+.control textarea {
+  font: inherit;
+  padding: 0.35rem;
+  border-radius: 4px;
+  background-color: #d6b3ad;
+  border: 1px solid #d6b3ad;
+  display: block;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.control input:focus,
+.control textarea:focus {
+  background-color: #d6b3ad;
+  outline-color: #162b2b;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  font-size: 1.25rem;
+  text-decoration: none;
+  background-color: #00477d;
+  color: white;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #00477d;
+  cursor: pointer;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #00589b;
+  border-color: #00589b;
+}
+
+@media only screen and (max-width: 768px) {
+  .actions button {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .actions button {
+    font-size: 0.8rem;
+  }
+}
